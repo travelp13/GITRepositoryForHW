@@ -31,8 +31,3 @@ for num in my_list:
 
 print(result_list)
 
-
-def even_squares(numbers):
-    for num in numbers:
-        if num % 2 == 0:
-            yield num ** 2
