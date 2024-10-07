@@ -1,0 +1,26 @@
+{
+  "last_id": 3,
+  "clients": [
+    {
+      "id": 1,
+      "name": "Nick",
+      "email": "test@email",
+      "phone": "3801254367",
+      "address": "Paris, av.New Town"
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "email": "john@gmail.com",
+      "phone": "3456789012",
+      "address": "New York av.105"
+    },
+    {
+      "id": 3,
+      "name": "Tom",
+      "email": "tom@gmail.com",
+      "phone": "34567890123",
+      "address": "Berlin, av. Ramstain 12"
+    }
+  ]
+}

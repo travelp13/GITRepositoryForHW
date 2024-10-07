@@ -1,0 +1,177 @@
+{
+  "last_id": 4,
+  "warehouses": [
+    {
+      "id": 1,
+      "name": "East warehouse",
+      "address": "Dnipro, vul. Yantarna 72",
+      "capacity": 1100,
+      "products": [
+        {
+          "id": 1,
+          "quantity": 18
+        },
+        {
+          "id": 5,
+          "quantity": 17
+        },
+        {
+          "id": 9,
+          "quantity": 1
+        },
+        {
+          "id": 13,
+          "quantity": 24
+        },
+        {
+          "id": 17,
+          "quantity": 4
+        },
+        {
+          "id": 21,
+          "quantity": 25
+        },
+        {
+          "id": 25,
+          "quantity": 39
+        },
+        {
+          "id": 29,
+          "quantity": 34
+        },
+        {
+          "id": 32,
+          "quantity": 3
+        },
+        {
+          "id": 36,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "West warehouse",
+      "address": "Lviv, vul. Dorozhnya 13",
+      "capacity": 500,
+      "products": [
+        {
+          "id": 2,
+          "quantity": 4
+        },
+        {
+          "id": 6,
+          "quantity": 20
+        },
+        {
+          "id": 10,
+          "quantity": 0
+        },
+        {
+          "id": 14,
+          "quantity": 13
+        },
+        {
+          "id": 18,
+          "quantity": 7
+        },
+        {
+          "id": 22,
+          "quantity": 14
+        },
+        {
+          "id": 26,
+          "quantity": 11
+        },
+        {
+          "id": 30,
+          "quantity": 15
+        },
+        {
+          "id": 34,
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "North warehouse",
+      "address": "Kyiv, vul. Bogaturska 44",
+      "capacity": 2000,
+      "products": [
+        {
+          "id": 3,
+          "quantity": 14
+        },
+        {
+          "id": 7,
+          "quantity": 2
+        },
+        {
+          "id": 11,
+          "quantity": 15
+        },
+        {
+          "id": 15,
+          "quantity": 30
+        },
+        {
+          "id": 19,
+          "quantity": 5
+        },
+        {
+          "id": 23,
+          "quantity": 17
+        },
+        {
+          "id": 27,
+          "quantity": 29
+        },
+        {
+          "id": 33,
+          "quantity": 7
+        },
+        {
+          "id": 37,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sourth warehouse",
+      "address": "Odesa, vul. Pidgorna 101",
+      "capacity": 1500,
+      "products": [
+        {
+          "id": 4,
+          "quantity": 15
+        },
+        {
+          "id": 8,
+          "quantity": 9
+        },
+        {
+          "id": 12,
+          "quantity": 14
+        },
+        {
+          "id": 16,
+          "quantity": 27
+        },
+        {
+          "id": 20,
+          "quantity": 16
+        },
+        {
+          "id": 28,
+          "quantity": 44
+        },
+        {
+          "id": 35,
+          "quantity": 14
+        }
+      ]
+    }
+  ]
+}

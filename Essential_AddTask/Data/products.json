@@ -1,0 +1,293 @@
+{
+  "last_id": 37,
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "category": "Electronics",
+      "price": 999.99,
+      "quantity": 18,
+      "description": "Latest model with A15 Bionic chip"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S21",
+      "category": "Electronics",
+      "price": 899.99,
+      "quantity": 4,
+      "description": "High performance and great camera"
+    },
+    {
+      "id": 3,
+      "name": "Sony WH-1000XM4",
+      "category": "Accessories",
+      "price": 349.99,
+      "quantity": 14,
+      "description": "Noise-cancelling headphones"
+    },
+    {
+      "id": 4,
+      "name": "MacBook Pro 14\"",
+      "category": "Computers",
+      "price": 1999.99,
+      "quantity": 15,
+      "description": "Powerful laptop with M1 Pro chip"
+    },
+    {
+      "id": 5,
+      "name": "Dell XPS 13",
+      "category": "Computers",
+      "price": 1299.99,
+      "quantity": 17,
+      "description": "Ultra-thin laptop with high performance"
+    },
+    {
+      "id": 6,
+      "name": "Sony PlayStation 5",
+      "category": "Gaming",
+      "price": 499.99,
+      "quantity": 20,
+      "description": "Next-gen gaming console"
+    },
+    {
+      "id": 7,
+      "name": "Xbox Series X",
+      "category": "Gaming",
+      "price": 499.99,
+      "quantity": 2,
+      "description": "Microsoft's latest gaming console"
+    },
+    {
+      "id": 8,
+      "name": "Nikon D3500",
+      "category": "Cameras",
+      "price": 449.99,
+      "quantity": 9,
+      "description": "Beginner-friendly DSLR camera"
+    },
+    {
+      "id": 9,
+      "name": "GoPro Hero 9",
+      "category": "Cameras",
+      "price": 399.99,
+      "quantity": 1,
+      "description": "Waterproof action camera"
+    },
+    {
+      "id": 10,
+      "name": "Amazon Echo Dot",
+      "category": "Smart Home",
+      "price": 49.99,
+      "quantity": 0,
+      "description": "Smart speaker with Alexa"
+    },
+    {
+      "id": 11,
+      "name": "Apple Watch Series 7",
+      "category": "Wearables",
+      "price": 399.99,
+      "quantity": 15,
+      "description": "Smartwatch with advanced health features"
+    },
+    {
+      "id": 12,
+      "name": "Fitbit Charge 5",
+      "category": "Wearables",
+      "price": 179.99,
+      "quantity": 14,
+      "description": "Fitness tracker with heart rate monitor"
+    },
+    {
+      "id": 13,
+      "name": "Huawei P40 Pro",
+      "category": "Electronics",
+      "price": 799.99,
+      "quantity": 24,
+      "description": "Flagship smartphone with great camera"
+    },
+    {
+      "id": 14,
+      "name": "Google Pixel 6",
+      "category": "Electronics",
+      "price": 699.99,
+      "quantity": 13,
+      "description": "High-performance Android phone"
+    },
+    {
+      "id": 15,
+      "name": "Apple AirPods Pro",
+      "category": "Accessories",
+      "price": 249.99,
+      "quantity": 30,
+      "description": "Wireless noise-cancelling earbuds"
+    },
+    {
+      "id": 16,
+      "name": "Razer Blade 15",
+      "category": "Computers",
+      "price": 2199.99,
+      "quantity": 27,
+      "description": "High-end gaming laptop"
+    },
+    {
+      "id": 17,
+      "name": "Logitech MX Master 3",
+      "category": "Accessories",
+      "price": 99.99,
+      "quantity": 4,
+      "description": "Advanced wireless mouse"
+    },
+    {
+      "id": 18,
+      "name": "Microsoft Surface Pro 7",
+      "category": "Computers",
+      "price": 899.99,
+      "quantity": 7,
+      "description": "Versatile 2-in-1 laptop"
+    },
+    {
+      "id": 19,
+      "name": "JBL Flip 5",
+      "category": "Accessories",
+      "price": 119.99,
+      "quantity": 5,
+      "description": "Portable waterproof Bluetooth speaker"
+    },
+    {
+      "id": 20,
+      "name": "Dyson V11 Vacuum",
+      "category": "Home Appliances",
+      "price": 599.99,
+      "quantity": 16,
+      "description": "Powerful cordless vacuum cleaner"
+    },
+    {
+      "id": 21,
+      "name": "Nespresso Vertuo",
+      "category": "Home Appliances",
+      "price": 249.99,
+      "quantity": 25,
+      "description": "Automatic coffee machine"
+    },
+    {
+      "id": 22,
+      "name": "Bose QuietComfort 35 II",
+      "category": "Accessories",
+      "price": 299.99,
+      "quantity": 14,
+      "description": "Wireless noise-cancelling headphones"
+    },
+    {
+      "id": 23,
+      "name": "ASUS ROG Strix G15",
+      "category": "Computers",
+      "price": 1599.99,
+      "quantity": 17,
+      "description": "Gaming laptop with powerful performance"
+    },
+    {
+      "id": 24,
+      "name": "Ring Video Doorbell 3",
+      "category": "Smart Home",
+      "price": 199.99,
+      "quantity": 15,
+      "description": "Smart doorbell with video recording"
+    },
+    {
+      "id": 25,
+      "name": "Anker PowerCore 10000",
+      "category": "Accessories",
+      "price": 29.99,
+      "quantity": 39,
+      "description": "Portable power bank with fast charging"
+    },
+    {
+      "id": 26,
+      "name": "Oculus Quest 2",
+      "category": "Gaming",
+      "price": 399.99,
+      "quantity": 11,
+      "description": "All-in-one VR gaming headset"
+    },
+    {
+      "id": 27,
+      "name": "Samsung 4K TV",
+      "category": "Electronics",
+      "price": 1199.99,
+      "quantity": 29,
+      "description": "Large 4K Ultra HD TV"
+    },
+    {
+      "id": 28,
+      "name": "Google Nest Thermostat",
+      "category": "Smart Home",
+      "price": 129.99,
+      "quantity": 44,
+      "description": "Smart thermostat for home automation"
+    },
+    {
+      "id": 29,
+      "name": "HP Envy 13",
+      "category": "Computers",
+      "price": 1099.99,
+      "quantity": 34,
+      "description": "Slim and powerful ultrabook"
+    },
+    {
+      "id": 30,
+      "name": "Sonos One",
+      "category": "Smart Home",
+      "price": 199.99,
+      "quantity": 15,
+      "description": "Smart speaker with voice control"
+    },
+    {
+      "id": 32,
+      "name": "Pixel 7",
+      "category": "Phones",
+      "price": 700.0,
+      "quantity": 5,
+      "description": "Google phone"
+    },
+    {
+      "id": 33,
+      "name": "Pixel 8",
+      "category": "Phones",
+      "price": 900.0,
+      "quantity": 7,
+      "description": "Google phone"
+    },
+    {
+      "id": 35,
+      "name": "Google Pixel 8 Pro",
+      "category": "Phones",
+      "price": 1300.0,
+      "quantity": 14,
+      "description": "Google phone"
+    },
+    {
+      "id": 35,
+      "name": "Google Pixel 8 Pro",
+      "category": "Phones",
+      "price": 1300.0,
+      "quantity": 14,
+      "description": "Google phone"
+    },
+    {
+      "id": 37,
+      "name": "test2",
+      "category": "test2",
+      "price": 200.0,
+      "quantity": 3,
+      "description": ""
+    },
+    {
+      "id": 37,
+      "name": "test2",
+      "category": "test2",
+      "price": 200.0,
+      "quantity": 3,
+      "description": ""
+    }
+  ]
+}
