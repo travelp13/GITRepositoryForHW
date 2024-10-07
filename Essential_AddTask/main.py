@@ -3,11 +3,13 @@ from module_products import Product
 from module_orders import Order
 from module_warehouses import Warehouse
 from module_clients import Client
+from module_reports import Report
 
 product = Product()
 client  = Client()
 order = Order()
 warehouse = Warehouse()
+report = Report(warehouse, product, order)
 
 ####### Checks #######
 def is_negative(value):
@@ -91,8 +93,8 @@ def add_product(name:str, category:str, price:float, quantity:int, description:s
     if wh:
         free_space = warehouse.get_free_space(warehouse_id)
         if free_space >= quantity:
-            product.add_product(name, category, price, quantity, description)
-            add_product_to_warehouse(warehouse_id, product.get_product_id(), quantity)
+            product_id = product.add_product(name, category, price, quantity, description)
+            add_product_to_warehouse(warehouse_id, product_id, quantity)
         else:
             raise ValueError("The quantity of products exceeds the available space in the warehouse")
     else:
@@ -235,6 +237,14 @@ def search_clients_menu():
         print("Знайдені клієнти:\n")
         result = search_clients(**params)
         client.print_clients(result)
+
+####### Reports functions #######
+def get_warehouse_report():
+    report.get_warehouse_report()
+
+def get_most_popular_products():
+    report.get_most_popular_products()
+
 
 ####### Menus #######
 def warehouse_menu():
@@ -430,8 +440,27 @@ def client_menu():
         except Exception as e:
             print(f"Щось пішло не так( {e.__class__}: {e}")
 
+def report_menu():
+    menu = '\nОберіть меню:, 1-Звіт про склади, 2-Звіт про популярні продукти, 0-Вихід, '
+        
+    while True:
+        print(("\n  ").join(menu.split(", ")))
+        choise = input()
+        try:
+            if choise == "0":
+                break
+            elif choise == "1":
+                get_warehouse_report()
+            elif choise == "2":
+                get_most_popular_products()
+            else:
+                print("Немає такого пункту меню, виберіть ще раз:")
+                continue
+        except Exception as e:
+            print(f"Щось пішло не так( {e.__class__}: {e}")
+
 def main_menu():
-    menu = 'Оберіть меню:, 1-Управління складами, 2-Управління продуктами, 3-Управління замовленнями, 4-Управління клієнтами, 0-Вихід, '
+    menu = 'Оберіть меню:, 1-Управління складами, 2-Управління продуктами, 3-Управління замовленнями, 4-Управління клієнтами, 5-Звітність, 0-Вихід, '
         
     while True:
         print(("\n  ").join(menu.split(", ")))
@@ -447,6 +476,8 @@ def main_menu():
             order_menu()
         elif choise == "4":
             client_menu()
+        elif choise == "5":
+            report_menu()
         else:
             print("Немає такого пункту меню, виберіть ще раз:")
             continue

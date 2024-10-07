@@ -1,5 +1,5 @@
 {
-  "last_id": 37,
+  "last_id": 33,
   "products": [
     {
       "id": 1,
@@ -14,7 +14,7 @@
       "name": "Samsung Galaxy S21",
       "category": "Electronics",
       "price": 899.99,
-      "quantity": 4,
+      "quantity": 3,
       "description": "High performance and great camera"
     },
     {
@@ -30,7 +30,7 @@
       "name": "MacBook Pro 14\"",
       "category": "Computers",
       "price": 1999.99,
-      "quantity": 15,
+      "quantity": 14,
       "description": "Powerful laptop with M1 Pro chip"
     },
     {
@@ -38,7 +38,7 @@
       "name": "Dell XPS 13",
       "category": "Computers",
       "price": 1299.99,
-      "quantity": 17,
+      "quantity": 16,
       "description": "Ultra-thin laptop with high performance"
     },
     {
@@ -54,7 +54,7 @@
       "name": "Xbox Series X",
       "category": "Gaming",
       "price": 499.99,
-      "quantity": 2,
+      "quantity": 1,
       "description": "Microsoft's latest gaming console"
     },
     {
@@ -70,7 +70,7 @@
       "name": "GoPro Hero 9",
       "category": "Cameras",
       "price": 399.99,
-      "quantity": 1,
+      "quantity": 0,
       "description": "Waterproof action camera"
     },
     {
@@ -102,7 +102,7 @@
       "name": "Huawei P40 Pro",
       "category": "Electronics",
       "price": 799.99,
-      "quantity": 24,
+      "quantity": 23,
       "description": "Flagship smartphone with great camera"
     },
     {
@@ -134,7 +134,7 @@
       "name": "Logitech MX Master 3",
       "category": "Accessories",
       "price": 99.99,
-      "quantity": 4,
+      "quantity": 1,
       "description": "Advanced wireless mouse"
     },
     {
@@ -190,7 +190,7 @@
       "name": "Ring Video Doorbell 3",
       "category": "Smart Home",
       "price": 199.99,
-      "quantity": 15,
+      "quantity": 14,
       "description": "Smart doorbell with video recording"
     },
     {
@@ -242,52 +242,28 @@
       "description": "Smart speaker with voice control"
     },
     {
+      "id": 31,
+      "name": "Google Pixel 8",
+      "category": "Electronics",
+      "price": 900.0,
+      "quantity": 3,
+      "description": "Google phone"
+    },
+    {
       "id": 32,
-      "name": "Pixel 7",
-      "category": "Phones",
-      "price": 700.0,
-      "quantity": 5,
+      "name": "Google Pixel 8 Pro",
+      "category": "Electronics",
+      "price": 1200.0,
+      "quantity": 9,
       "description": "Google phone"
     },
     {
       "id": 33,
-      "name": "Pixel 8",
-      "category": "Phones",
-      "price": 900.0,
-      "quantity": 7,
+      "name": "Google Pixel 9",
+      "category": "Electronics",
+      "price": 1350.0,
+      "quantity": 15,
       "description": "Google phone"
-    },
-    {
-      "id": 35,
-      "name": "Google Pixel 8 Pro",
-      "category": "Phones",
-      "price": 1300.0,
-      "quantity": 14,
-      "description": "Google phone"
-    },
-    {
-      "id": 35,
-      "name": "Google Pixel 8 Pro",
-      "category": "Phones",
-      "price": 1300.0,
-      "quantity": 14,
-      "description": "Google phone"
-    },
-    {
-      "id": 37,
-      "name": "test2",
-      "category": "test2",
-      "price": 200.0,
-      "quantity": 3,
-      "description": ""
-    },
-    {
-      "id": 37,
-      "name": "test2",
-      "category": "test2",
-      "price": 200.0,
-      "quantity": 3,
-      "description": ""
     }
   ]
 }

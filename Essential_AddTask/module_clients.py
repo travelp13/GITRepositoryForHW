@@ -10,12 +10,8 @@ class Client(BaseDBClass):
         return self.get_list_data()
 
     def add_client(self, name:str, email:str, phone:str, address:str):
-        self.id = self.get_next_id()
-        self.name = name
-        self.email = email
-        self.phone = phone
-        self.address = address
-        client = self.to_dict()
+        id = self.get_next_id()        
+        client = self.to_dict(id, name, email, phone, address)
         self.append_list_data(client)
         self.save_clients()
 
@@ -46,9 +42,15 @@ class Client(BaseDBClass):
             else:
                 result = [d for d in result if d.get(key) == value]
         return result
-
-    def to_dict(self):
-        return self.__dict__
+    
+    def to_dict(self, id:int, name:str, email:str, phone:str, address:str):
+        return {
+            "id": id,
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "address": address
+        }
     
     @staticmethod
     def print_clients(clients:list) -> str:

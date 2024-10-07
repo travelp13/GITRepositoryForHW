@@ -10,18 +10,11 @@ class Product(BaseDBClass):
         return self.get_list_data()
 
     def add_product(self, name:str, category:str, price:float, quantity:int, description:str) -> int:
-        self.id = self.get_next_id()
-        self.name = name
-        self.category = category
-        self.price = price
-        self.quantity = quantity
-        self.description = description
-        product = self.to_dict()
+        id = self.get_next_id()
+        product = self.to_dict(id, name, category, price, quantity, description)
         self.append_list_data(product)
         self.save_products()
-    
-    def get_product_id(self):
-        return self.id
+        return id
     
     def edit_product(self, product_id:int, **kwargs):
         product = self.find_product_by_id(product_id)
@@ -59,8 +52,15 @@ class Product(BaseDBClass):
                 result = [d for d in result if d.get(key) == value]
         return result
 
-    def to_dict(self):
-        return self.__dict__
+    def to_dict(self, id:int, name:str, category:str, price:float, quantity:int, description:str):
+        return {
+            "id": id,
+            "name": name,
+            "category": category,
+            "price": price,
+            "quantity": quantity,
+            "description": description
+        }
     
     @staticmethod
     def print_products(products:list) -> str:

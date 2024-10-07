@@ -12,21 +12,19 @@ class Order(BaseDBClass):
         return self.get_list_data()
 
     def add_order(self, client_id:int, products: list) -> float:
-        self.id = self.get_next_id()
-        self.client_id = client_id
-        self.products = products
-        self.total_amount = self.get_total_amount(products)
-        self.status = "New"
-        order = self.to_dict()
+        id = self.get_next_id()
+        total_amount = self.get_total_amount(products)
+        order = self.to_dict(id, client_id, products, total_amount)
         self.append_list_data(order)
         self.save_orders()
+        return total_amount
 
     @staticmethod
     def get_total_amount(products: list):        
         total_amount = 0
         for product in products:
             total_amount += product["price"]*product["quantity"]
-        return total_amount
+        return round(total_amount,2)
     
     @classmethod
     def get_status_by_id(cls, status):
@@ -62,9 +60,15 @@ class Order(BaseDBClass):
             else:
                 result = [d for d in result if d.get(key) == value]
         return result
-
-    def to_dict(self):
-        return self.__dict__
+    
+    def to_dict(self, id:int, client_id:int, products: list, total_amount: float):
+        return {
+            "id": id,
+            "client_id": client_id,
+            "products": products,
+            "total_amount": total_amount,
+            "status": "New"
+        }
     
     @staticmethod
     def print_orders(orders:list) -> str:

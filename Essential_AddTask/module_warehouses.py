@@ -10,12 +10,8 @@ class Warehouse(BaseDBClass):
         return self.get_list_data()
 
     def add_warehouse(self, name:str, address:str, capacity:int):
-        self.id = self.get_next_id()
-        self.name = name
-        self.address = address
-        self.capacity = capacity
-        self.products = []
-        warehouse = self.to_dict()
+        id = self.get_next_id()
+        warehouse = self.to_dict(id, name, address, capacity)
         self.append_list_data(warehouse)
         self.save_warehouses()
     
@@ -76,5 +72,11 @@ class Warehouse(BaseDBClass):
             return warehouse["capacity"] - total_quantity
         return None
     
-    def to_dict(self):
-        return self.__dict__
+    def to_dict(self, id:int, name:str, address:str, capacity:int):
+        return {
+            "id": id,
+            "name": name,
+            "address": address,
+            "capacity": capacity,
+            "products": []
+        }
