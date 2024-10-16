@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order id="1">
+        <client>
+            <firstName>John</firstName>
+            <lastName>Doe</lastName>
+            <contacts>
+                <phone>+123456789</phone>
+                <email>john.doe@example.com</email>
+            </contacts>
+        </client>
+        <delivery type="Courier"/>
+        <products>
+            <product id="101">
+                <name>Laptop</name>
+                <price>1200.00</price>
+            </product>
+            <product id="102">
+                <name>Mouse</name>
+                <price>25.99</price>
+            </product>
+        </products>
+    </order>
+    
+    <order id="2">
+        <client>
+            <firstName>Jane</firstName>
+            <lastName>Smith</lastName>
+            <contacts>
+                <phone>+987654321</phone>
+                <email>jane.smith@example.com</email>
+            </contacts>
+        </client>
+        <delivery type="Pickup"/>
+        <products>
+            <product id="103">
+                <name>Smartphone</name>
+                <price>799.99</price>
+            </product>
+            <product id="104">
+                <name>Wireless Headphones</name>
+                <price>150.00</price>
+            </product>
+        </products>
+    </order>
+    
+    <order id="3">
+        <client>
+            <firstName>Michael</firstName>
+            <lastName>Johnson</lastName>
+            <contacts>
+                <phone>+1122334455</phone>
+                <email>michael.j@example.com</email>
+            </contacts>
+        </client>
+        <delivery type="Courier"/>
+        <products>
+            <product id="105">
+                <name>Gaming Console</name>
+                <price>499.99</price>
+            </product>
+        </products>
+    </order>
+</orders>
