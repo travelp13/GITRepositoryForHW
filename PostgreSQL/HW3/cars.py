@@ -1,5 +1,4 @@
 import psycopg2
-from collections import namedtuple
 from psycopg2.extras import DictCursor
 from datetime import datetime
 
