@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Надіслати відгук</title>
+</head>
+
+<body>
+    <h1>Надіслати відгук на продукт</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Відображення полів форми -->
+        <button type="submit">Надіслати відгук</button>
+    </form>
+    <a href="{% url 'main_page' %}">Повернутись до головної сторінки</a>
+</body>
+
+</html>

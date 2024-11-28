@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Інтернет-магазин</title>
+    <link rel="stylesheet" href="{% static 'my_shop_app/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'catalog' %}">Інтернет-магазин</a></h1>
+        <nav>
+            <ul>
+                {% for category in categories %}
+                <li><a href="{% url 'category_detail' category.pk %}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

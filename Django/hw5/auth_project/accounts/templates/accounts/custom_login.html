@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Кастомна авторизація</title>
+</head>
+
+<body>
+    <h1>Кастомна авторизація</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Увійти</button>
+    </form>
+</body>
+
+</html>

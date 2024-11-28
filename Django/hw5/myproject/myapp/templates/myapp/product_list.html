@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Список продуктів</title>
+</head>
+
+<body>
+    <h1>Список продуктів</h1>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }} грн</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_product' %}">Додати новий продукт</a><br>
+    <a href="{% url 'main_page' %}">Повернутись до головної сторінки</a>
+</body>
+
+</html>

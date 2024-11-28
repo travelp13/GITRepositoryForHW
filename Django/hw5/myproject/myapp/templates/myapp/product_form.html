@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Створення продукту</title>
+</head>
+
+<body>
+    <h1>Додати новий продукт</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Відображення форми -->
+        <button type="submit">Додати продукт</button>
+    </form>
+    <a href="{% url 'main_page' %}">Повернутись до головної сторінки</a>
+</body>
+
+</html>

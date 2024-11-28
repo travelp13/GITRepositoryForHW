@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Список завдань</title>
+</head>
+
+<body>
+    <h1>Список завдань</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task.priority }} - {{ task.task }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'main_page' %}">Повернутись до головної сторінки</a>
+</body>
+
+</html>

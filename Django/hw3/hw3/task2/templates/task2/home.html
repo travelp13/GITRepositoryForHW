@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Головна сторінка зоряних воєн</title>
+</head>
+
+<body>
+    <h1>Ласкаво просимо до всесвіту зоряних воєн!</h1>
+    <p>Виберіть сторінку:</p>
+    <ul>
+        <li><a href="{% url 'luke' %}">Люк</a></li>
+        <li><a href="{% url 'leia' %}">Лея</a></li>
+        <li><a href="{% url 'han' %}">Хан</a></li>
+    </ul>
+    <a href="{% url 'main_page' %}">Повернутись до головної сторінки</a>
+</body>
+
+</html>

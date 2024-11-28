@@ -1,0 +1,15 @@
+{% extends 'my_shop_app/base.html' %}
+{% block content %}
+{% load static %}
+<h2>Каталог товарів</h2>
+<div class="product-grid">
+    {% for product in products %}
+    <div class="product">
+        <img src="{% static product.image_url %}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>Ціна: {{ product.price }} грн</p>
+        <a href="{% url 'product_detail' product.pk %}">Переглянути</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
