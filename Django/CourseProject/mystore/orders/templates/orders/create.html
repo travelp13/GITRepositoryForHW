@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+Оформлення замовлення
+{% endblock %}
+
+{% comment %} {% block content %}
+<div class="container my-5">
+    <h2>Оформлення замовлення</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <h4>Ваше замовлення:</h4>
+        <ul>
+            {% for item in cart %}
+                <li>{{ item.product.name }} ({{ item.quantity }} шт.) - {{ item.total_price }} грн</li>
+            {% endfor %}
+        </ul>
+        <button type="submit" class="btn btn-primary">Підтвердити замовлення</button>
+    </form>
+</div>
+{% endblock %} {% endcomment %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Оформлення замовлення</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="id_first_name" class="form-label">Ім'я</label>
+                {{ form.first_name }}
+            </div>
+            <div class="col-md-6">
+                <label for="id_last_name" class="form-label">Прізвище</label>
+                {{ form.last_name }}
+            </div>
+            <div class="col-md-12">
+                <label for="id_email" class="form-label">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="col-md-12">
+                <label for="id_address" class="form-label">Адреса</label>
+                {{ form.address }}
+            </div>
+            <div class="col-md-6">
+                <label for="id_city" class="form-label">Місто</label>
+                {{ form.city }}
+            </div>
+            <div class="col-md-6">
+                <label for="id_postal_code" class="form-label">Поштовий індекс</label>
+                {{ form.postal_code }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Підтвердити замовлення</button>
+    </form>
+</div>
+{% endblock %}

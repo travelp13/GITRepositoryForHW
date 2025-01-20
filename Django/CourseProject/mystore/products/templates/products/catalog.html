@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Каталог продуктів
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Каталог продуктів</h1>
+<div class="container my-5">
+    <div class="row">
+        <!-- Список категорий -->
+        <div class="col-md-3">
+            <h4>Категорії</h4>
+            <ul class="list-group">
+                <li class="list-group-item {% if not selected_category %}active{% endif %}">
+                    <a href="{% url 'catalog' %}" class="text-decoration-none">Усі категорії</a>
+                </li>
+                {% for category in categories %}
+                    <li class="list-group-item {% if selected_category and category.id == selected_category.id %}active{% endif %}">
+                        <a href="?category={{ category.id }}" class="text-decoration-none">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Список продуктов -->
+        <div class="col-md-9">
+            <h4>
+                {% if selected_category %}
+                    Продукти з категорії "{{ selected_category.name }}"
+                {% else %}
+                    Усі продукти
+                {% endif %}
+            </h4>
+            <div class="row g-3">
+                {% for product in products %}
+                    <div class="col-md-4 ">
+
+                        <div class="product-card border p-3 rounded">
+                            <div class="product-thumb">
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.slug %}">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a> 
+                                {% endif %}
+                            </div>
+                            <div class="product-details">
+                                <h4>
+                                <a href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                            </h4>
+                                <p>{{ product.description }}</p>
+                                
+                            </div>
+                            <div class="product-bottom-details d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>{{ product.get_price_in_uah }}</small> {{ product.get_price_with_discount }} грн
+                                </div>
+                                <div class="product-links">
+                                    <a href="{% url 'product_detail' product.slug %}" class="btn btn-primary">Детальнiше</a>
+                                </div>
+                            </div>
+                        </div>            
+                    </div>
+                {% endfor %}
+                {% if not products %}
+                    <p>У цій категорії поки що немає продуктів.</p>
+                {% endif %}
+            </div>
+             <!-- Пагинация -->
+             <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    {% if products.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if selected_category %}category={{ selected_category.id }}&{% endif %}page={{ products.previous_page_number }}" aria-label="Попередня">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&laquo;</span>
+                        </li>
+                    {% endif %}
+                    
+                    <!-- Страницы -->
+                    {% for page_num in products.paginator.page_range %}
+                        {% if page_num == products.number %}
+                            <li class="page-item active"><span class="page-link">{{ page_num }}</span></li>
+                        {% else %}
+                            <li class="page-item">
+                                <a class="page-link" href="?{% if selected_category %}category={{ selected_category.id }}&{% endif %}page={{ page_num }}">{{ page_num }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if products.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?{% if selected_category %}category={{ selected_category.id }}&{% endif %}page={{ products.next_page_number }}" aria-label="Наступна">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&raquo;</span>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}

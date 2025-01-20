@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Кошик
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">Кошик</h2>
+    
+    <!-- Если корзина пуста -->
+    {% if not cart %}
+        <div class="alert alert-info" role="alert">
+            Ваш кошик порожній. Додайте товари до кошика, щоб почати покупки.
+        </div>
+    {% else %}
+        <!-- Таблица товаров -->
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Товар</th>
+                        <th>Ціна за одиницю</th>
+                        <th>Кількість</th>
+                        <th>Загальна ціна</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart %}
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                {% if item.product.image %}
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-thumbnail me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                                {% endif %}
+                                <span>{{ item.product.name }}</span>
+                            </div>
+                        </td>
+                        <td>{{ item.price }} грн</td>
+                        <td>
+                            <form method="post" action="{% url 'cart:cart_add' item.product.id %}" class="d-inline">
+                                {% csrf_token %}
+                                <input type="hidden" name="update" value="True">
+                                <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="20" class="form-control form-control-sm d-inline w-auto text-center">
+                                <button type="submit" class="btn btn-sm btn-secondary">Оновити</button>
+                            </form>
+                        </td>
+                        <td>{{ item.total_price }} грн</td>
+                        <td>
+                            <form method="post" action="{% url 'cart:cart_remove' item.product.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-danger">Видалити</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot class="table-light">
+                    <tr>
+                        <th colspan="3" class="text-end">Всього:</th>
+                        <th colspan="2">{{ cart.get_total_price }} грн</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Действия с корзиной -->
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <a href="{% url 'catalog' %}" class="btn btn-outline-primary">Продовжити покупки</a>
+            <a href="{% url 'orders:order_create' %}" class="btn btn-success">Оформити замовлення</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

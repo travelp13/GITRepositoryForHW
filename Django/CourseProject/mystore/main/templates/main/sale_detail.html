@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ sale.name }}
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Деталі акції</h1>
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center shadow border rounded p-4 bg-white">
+        <div class="sale-detail-thumb">
+            {% if sale.image %}
+                <img src="{{ sale.image.url }}" alt="{{ sale.name }}">
+            {% endif %}
+        </div>        
+        <p></p>
+        <div class="col-md-8 text-center">
+            <h3>{{ sale.description_html|safe }}</h3>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{% url 'sale_list' %}" class="btn btn-primary">Назад до акцій</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

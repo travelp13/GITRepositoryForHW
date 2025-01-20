@@ -1,0 +1,51 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}
+Вхід до облікового запису
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header text-center bg-primary text-white">
+                    <h4>Вхід до облікового запису</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Логін</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Введіть логін" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Пароль</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Введіть пароль" required>
+                        </div>
+                        {% if form.errors %}
+                            <div class="alert alert-danger">
+                                <ul class="mb-0">
+                                    {% for error in form.non_field_errors %}
+                                        {% if error == "Please enter a correct username and password. Note that both fields may be case-sensitive." %}
+                                            <p>Будь ласка, введіть правильний логін та пароль. Зверніть увагу, що обидва поля чутливі до регістру.</p>
+                                        {% else %}
+                                            <p>{{ error }}</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-primary w-100">Увійти</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p class="mb-0">Не маєте облікового запису? <a href="{% url 'users:register' %}" class="text-primary">Реєстрація</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

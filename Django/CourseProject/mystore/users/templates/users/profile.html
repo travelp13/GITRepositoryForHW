@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Інформація про користувача
+{% endblock %}
+
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="mb-4">Ваш профіль</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-5">Інформація про користувача</h5>
+                    <p class="card-text"><strong>Логін:</strong> {{ user.username }}</p>
+                    <p class="card-text"><strong>Ім'я:</strong> {{ user.first_name }}</p>  
+                    <p class="card-text"><strong>Прізвище:</strong> {{ user.last_name }}</p>  
+                    <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>                    
+                    <a href="{% url 'users:logout' %}" class="btn btn-danger">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

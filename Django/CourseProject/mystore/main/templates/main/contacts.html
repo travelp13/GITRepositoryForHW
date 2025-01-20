@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Контакти
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="container my-5">
+    <!-- Блок с контактами -->
+    <div class="row justify-content-center shadow border rounded p-4 mb-4 bg-white">
+        <div class="col-md-4 text-center">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logo2.png' %}" alt="E-Shop" width="360" height="360"
+                    class="d-inline-block align-text-left">
+            </a>
+        </div>
+        <div class="col-md-4 text-left">
+            <h3>Контакти</h3>
+            <p>
+                <i class="fa-solid fa-phone-volume fa-lg"></i>
+                <span class="fs-6 fw-bold"> Телефони</span>
+                <li class="dropdown-item fs-xs fw-normal">
+                    <a href="tel:+380671234567" class="blue-link">+38 (067) 123 45 67</a><br>
+                    <a href="tel:+380501234567" class="blue-link">+38 (050) 123 45 67</a><br>
+                    <a href="tel:+380731234567" class="blue-link">+38 (073) 123 45 67</a>
+                </li>
+            </p>
+            <p>
+                <i class="fa-solid fa-calendar-days fa-lg"></i>
+                <span class="fs-6 fw-bold"> Графік роботи</span>
+                <li>
+                    <span class="fs-xs fw-normal">ПН-ПТ: 09:00–18:00</span>
+                </li>
+                <li>
+                    <span class="fs-xs fw-normal">СБ: 10:00-14:00</span>
+                </li>
+                <li>
+                    <span class="fs-xs fw-normal">ВС: Вихідний</span>
+                </li>
+            </p>
+        </div>
+    </div>
+    <!-- Блок с картой -->
+    <div class="row justify-content-center shadow border rounded p-4 mb-4 bg-white">
+        <div class="col-md-8 text-center">
+            <h3>Наша адреса</h3>
+            <span class="fs-6 fw-normal">м. Київ, вул. Марії Капніст 4, офіс 101</span>
+            <div class="map-responsive">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1207017371476!2d30.4397329!3d50.457477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc30d708e389%3A0x4d08e0d37609b996!2z0KLRgNC-0LnQutCwLCDQstGD0LvQuNGG0Y8g0JzQsNGA0ZbRlyDQmtCw0L_QvdGW0YHRgiwgNCwg0JrQuNC10LIsINCj0LrRgNCw0ZfQvdCwLCAwMjAwMA!5e0!3m2!1suk!2ses!4v1736874960625!5m2!1suk!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
